@@ -1,0 +1,36 @@
+$navBarColor: #F1F1F1;
+
+/* ------- Classes ---------*/
+
+$background-Color: darken($navBarColor, 10%);
+$contrastColor: white;
+$borderColor: lighten($navBarColor, 10%);
+$tabColor: lighten($background-Color, 15%);
+$panelColor: lighten($background-Color, 11%);
+$tableRowEvenColor: darken($panelColor, 6%);
+$tableRowOddColor: $panelColor;
+$formColor: darken($panelColor, 20%);
+$formAddOnColor: lighten($panelColor, 10%);
+$formDisabledColor: lighten($background-Color, 5%);
+
+/* ------- Icons ---------*/
+
+$iconColor:lighten($navBarColor, 30%);
+$inBetweenColor: lighten($panelColor, 15%);
+$textColor: lighten($navBarColor, 70%);
+$texttransparentize: transparentize($textColor, 0.7);
+$textLegend: transparentize($textColor, 0.5);
+$textDisabledColor: transparentize($textColor, 0.4);
+
+/* ------- Colors ---------- */
+
+$btnDefaultColor: lighten($background-Color, 10%);
+$primary: #3573a6;
+$success: #4e975b;
+$info: #28828f;
+$warning: #c87b3d;
+$danger: #c63720;
+$rapidRed: #FF0000;
+$red: #FF0000;
+$white: #FFF;
+$black: #000;

@@ -1,0 +1,133 @@
+@import "_variables.scss";
+$navbar-height:50px;
+
+/*----------- NAVBAR -------------*/
+
+.navbar {
+  height: $navbar-height;
+  padding: 0;
+  border-bottom: none;
+  border-radius: 0; //
+  z-index: 3000;
+}
+
+
+/*------------ TOP BUTTONS -----------*/
+
+nav.navbar {
+  //padding: 0;
+  .d-flex {
+    //background: red;
+    a.header-brand {
+      //background: gold;
+      img {
+        padding: 0;
+        margin-top: 0;
+      }
+    }
+    div.nav {
+      div.nav-item {
+        height: $navbar-height;
+        text-align: center;
+        cursor: pointer;
+        a.nav-link {
+          height: $navbar-height;
+          line-height: $navbar-height;
+          font-weight: 400;
+          padding: 4px 12px 0 12px;
+          margin-top: 0;
+          .fa {
+
+            padding: 0;
+            margin: 0 6px 0 0;
+          }
+        }
+        &:hover {
+          .fa {
+            opacity: .8;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*------------ RESPONSIVE -----------*/
+
+@mixin navbar-breakpoint($logoHeight, $navItemWidth, $iconSize) {
+  $logoAspectFactor: 7;
+  $logoWidth: $logoHeight * $logoAspectFactor;
+  nav.navbar {
+    div.d-flex {
+      //padding:0 20px;
+      a.header-brand {
+        height: $logoHeight;
+        width: $logoWidth;
+        line-height: $logoHeight;
+      }
+      div.nav {
+        div.nav-item {
+          width: $navItemWidth;
+          a.nav-link {
+            width: $navItemWidth;
+            .fa {
+              font-size: $iconSize;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*------------ BREAKPOINTS -----------*/
+
+@include screen-xs {
+  @include navbar-breakpoint(20px, 60px, 1.8em);
+}
+
+@include screen-sm {
+  @include navbar-breakpoint(20px, 110px, 1.8em);
+}
+
+@include screen-md {
+  @include navbar-breakpoint(25px, 120px, 1.8em);
+}
+
+@include screen-lg {
+  @include navbar-breakpoint(25px, 130px, 1.8em);
+}
+
+
+/*------------ COLORS -----------*/
+
+$navBarText: $white;
+$navBarActiveColor: darken($navBarColor, 5%);
+$navBarHoverColor: darken($navBarColor, 3%);
+$navBarMenuColor: $navBarActiveColor;
+$navBarMenuHoverColor: darken($navBarMenuColor, 3%);
+nav.navbar {
+  background: $navBarColor;
+  div.nav {
+    div.nav-item {
+      a.nav-link {
+        color: $navBarText;
+        .fa {
+          opacity: .6;
+          color: $navBarText;
+        }
+      }
+      &:hover {
+        background: $navBarHoverColor;
+        a {
+          color: $navBarText;
+          .fa {
+            color: $navBarText;
+          }
+        }
+      }
+    }
+  }
+}

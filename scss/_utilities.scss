@@ -1,0 +1,78 @@
+
+
+/*---  Breakpoints ----*/
+
+$screen-width: 98.8vw;
+$screen-height: ($screen-width * .3333);
+@mixin breakpoint-xs {
+    @media only screen and (min-width: 100px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-sm {
+    @media only screen and (min-width: 368px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-md {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-lg {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin font-s($font-size, $fontColor) {
+    font-family: 'Roboto', Gill Sans, Verdana, sans-serif;
+    //line-height: 1.8em;
+    font-size: $font-size;
+    color: $fontColor;
+}
+
+@mixin font-c($font-size, $fontColor) {
+    font-family: 'Roboto Condensed', Arial Narrow, Arial, sans-serif;
+    //line-height: 1.8em;
+    font-size: $font-size;
+    color: $fontColor;
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    -ms-transform: perspective(1px) translateY(-50%);
+    -o-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+}
+
+@mixin truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+@mixin inner-legend {
+    text-transform: uppercase;
+    font-size: .9em;
+    display: inline-block;
+    text-align: right;
+    letter-spacing: 0.03em;
+    padding-right: 4px;
+    color: $textLegend;
+}

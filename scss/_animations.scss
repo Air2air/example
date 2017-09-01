@@ -1,0 +1,80 @@
+    @import "_colors.scss";
+    /*------ Button ripple --------*/
+    
+    $ripple-color: $rapidRed;
+    $ripple-opacity: .4;
+    @mixin ripple($height, $width) {
+        position: relative;
+        overflow: hidden;
+         :after {
+            display: inline;
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $width;
+            height: $height;
+            background-color: fade-in($ripple-color, $ripple-opacity);
+            opacity: 0;
+            overflow: hidden;
+            transform: translate(0%, 0%);
+            animation-iteration-count: 1;
+        }
+        @keyframes ripple-effect {
+            0% {
+                opacity: $ripple-opacity;
+            }
+            20% {
+                opacity: $ripple-opacity;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        /*:focus:not(:active)::after { */
+         :active:not(.active):not(.fa)::after {
+            outline: none;
+            animation: ripple-effect .5s ease-out;
+        }
+    }
+    
+    @mixin slide-up($slide-up-height) {
+        position: absolute;
+        top: -($slide-up-height);
+        left: 0;
+        width: 100%;
+        height: $slide-up-height;
+        @include transition;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    /*-------------- Grow -----------------*/
+    
+    $transition-time: 5s;
+    $delay-time: .5s;
+    $initial-scale: 1;
+    $final-scale: 1.06;
+    @mixin grow {
+        @-webkit-keyframes scaleUp {
+            100% {
+                -webkit-transform: scale($final-scale);
+            }
+        }
+        @keyframes scaleUp {
+            100% {
+                transform: scale($final-scale);
+            }
+        }
+        transition: all $transition-time ease-in-out;
+        -moz-transition: all $transition-time ease-in-out;
+        -webkit-transition: all $transition-time ease-in-out;
+        -webkit-transform: scale($initial-scale);
+        transform: scale($initial-scale);
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        &:hover {
+            -webkit-animation: $transition-time ease-in-out $delay-time scaleUp;
+            animation: $transition-time ease-in-out $delay-time scaleUp;
+        }
+    }   

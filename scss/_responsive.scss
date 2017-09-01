@@ -1,0 +1,48 @@
+
+
+
+
+/*----------- VIEWPORT ------------*/
+$screen-width: 98.8vw;
+$screen-height: ($screen-width * .3333);
+
+/*----------- BREAKPOINT SIZES ------------*/
+$screen-xs:0px;
+$screen-sm:576px;
+$screen-md:768px;
+$screen-lg:992px;
+$screen-xl:1200px;
+
+/*----------- MIXINS ------------*/
+
+@mixin screen-xs {
+    @media only screen and (min-width: $screen-xs) {
+        @content;
+    }
+}
+
+@mixin screen-sm {
+    @media only screen and (min-width: $screen-sm) {
+        @content;
+    }
+}
+
+@mixin screen-md {
+    @media only screen and (min-width: $screen-md) {
+        @content;
+    }
+}
+
+@mixin screen-lg {
+    @media only screen and (min-width: $screen-lg) {
+        @content;
+    }
+}
+
+@mixin screen-xl {
+    @media only screen and (min-width: $screen-xl) {
+        @content;
+    }
+}
+
+

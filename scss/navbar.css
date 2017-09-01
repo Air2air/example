@@ -1,0 +1,229 @@
+/* ------- Classes ---------*/
+/* ------- Icons ---------*/
+/* ------- Colors ---------- */
+/*------ Button ripple --------*/
+/*-------------- Grow -----------------*/
+/* ------- Classes ---------*/
+/* ------- Icons ---------*/
+/* ------- Colors ---------- */
+/*----------- VIEWPORT ------------*/
+/*----------- BREAKPOINT SIZES ------------*/
+/*----------- MIXINS ------------*/
+/*--------- Fading -----------*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 200ms;
+  -moz-animation-duration: 200ms;
+  animation-duration: 200ms;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.fade-in.three {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.fade-in.four {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.fade-in.five {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fade-in.six {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+/*------------ Mixin versions --------------*/
+/*---  Breakpoints ----*/
+/*------------- FONTS --------------*/
+/*------------- ROWS --------------*/
+/*------------- COMPONENT STACK --------------*/
+/*----------- NAVBAR -------------*/
+.navbar {
+  height: 50px;
+  padding: 0;
+  border-bottom: none;
+  border-radius: 0;
+  z-index: 3000;
+}
+
+/*------------ TOP BUTTONS -----------*/
+nav.navbar .d-flex a.header-brand img {
+  padding: 0;
+  margin-top: 0;
+}
+
+nav.navbar .d-flex div.nav div.nav-item {
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+nav.navbar .d-flex div.nav div.nav-item a.nav-link {
+  height: 50px;
+  line-height: 50px;
+  font-weight: 400;
+  padding: 4px 12px 0 12px;
+  margin-top: 0;
+}
+
+nav.navbar .d-flex div.nav div.nav-item a.nav-link .fa {
+  padding: 0;
+  margin: 0 6px 0 0;
+}
+
+nav.navbar .d-flex div.nav div.nav-item:hover .fa {
+  opacity: .8;
+}
+
+/*------------ RESPONSIVE -----------*/
+/*------------ BREAKPOINTS -----------*/
+@media only screen and (min-width: 0px) {
+  nav.navbar div.d-flex a.header-brand {
+    height: 20px;
+    width: 140px;
+    line-height: 20px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item {
+    width: 60px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item a.nav-link {
+    width: 60px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item a.nav-link .fa {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  nav.navbar div.d-flex a.header-brand {
+    height: 20px;
+    width: 140px;
+    line-height: 20px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item {
+    width: 110px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item a.nav-link {
+    width: 110px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item a.nav-link .fa {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav.navbar div.d-flex a.header-brand {
+    height: 25px;
+    width: 175px;
+    line-height: 25px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item {
+    width: 120px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item a.nav-link {
+    width: 120px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item a.nav-link .fa {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  nav.navbar div.d-flex a.header-brand {
+    height: 25px;
+    width: 175px;
+    line-height: 25px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item {
+    width: 130px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item a.nav-link {
+    width: 130px;
+  }
+  nav.navbar div.d-flex div.nav div.nav-item a.nav-link .fa {
+    font-size: 1.8em;
+  }
+}
+
+/*------------ COLORS -----------*/
+nav.navbar {
+  background: #F1F1F1;
+}
+
+nav.navbar div.nav div.nav-item a.nav-link {
+  color: #FFF;
+}
+
+nav.navbar div.nav div.nav-item a.nav-link .fa {
+  opacity: .6;
+  color: #FFF;
+}
+
+nav.navbar div.nav div.nav-item:hover {
+  background: #e9e9e9;
+}
+
+nav.navbar div.nav div.nav-item:hover a {
+  color: #FFF;
+}
+
+nav.navbar div.nav div.nav-item:hover a .fa {
+  color: #FFF;
+}

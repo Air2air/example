@@ -1,0 +1,44 @@
+@import "_animations.scss";
+@import "_colors.scss";
+@import "_responsive.scss";
+@import "_transitions.scss";
+@import "_utilities.scss";
+
+
+/*------------- FONTS --------------*/
+
+$font-family: 'Roboto',
+Arial,
+Helvetica,
+sans-serif;
+$font-face: 'Roboto',
+Arial,
+Helvetica,
+sans-serif;
+$font-size: 14px;
+
+/*------------- ROWS --------------*/
+
+$row-legend-height:40px;
+$row-height:46px;
+$row-component-height:32px;
+$row-component-padding:($row-height - $row-component-height) * .5;
+
+/*------------- COMPONENT STACK --------------*/
+$top-screen-height:400px;
+// Overlaps bottom screen
+
+$breadcrumb-position: 80px;
+$breadcrumb-height: 44px;
+
+$tabs-position: 110px;
+$tabs-height: 40px;
+
+$thumbs-position: 126px;
+$thumbs-height: 220px;
+
+$header-position: 126px;
+$header-height:60px;
+
+$viewer-position: 136px;
+
